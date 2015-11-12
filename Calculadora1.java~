@@ -15,7 +15,7 @@ public class Calculadora1{
 		int operacion;
 
 		switch(operador){
-		case 'x':
+		case '*':
 			operacion = operandoUno * operandoDos;
 			System.out.println(operandoUno + " " + operador + " " + operandoDos + " es igual a " + operacion);
 			break; 
