@@ -3,28 +3,25 @@ public class HoraDia{
 		//Variables
 		int hora = Integer.parseInt(args[0]);
 		int minutos = Integer.parseInt(args[1]);
-		if(minutos == 0){
-			minutos = 00;
-		}
-		
-		//Intento de echar atras las variables invalidades pero hay un problema con el 0
-		/*
+		String horaPrint = args[0];
+		String minutosPrint = args[1];
+	
 		//Estas variables se encargan de obtener el tamaño		
-		int sizeHora = (int) Math.floor(Math.log10(hora) + 1);
-		int sizeMinutos = (int) Math.floor(Math.log10(minutos) + 1);
+		int sizeHora = horaPrint.length();
+		int sizeMinutos = minutosPrint.length();
 
 		//Mensajes de error en argumentacion, esto se coloca lo primero para evitar ejecutar ninguna funcion.
 		if(sizeHora != 2 || sizeMinutos != 2){
 			System.out.println("Las hora debe ser introducida en formato digital separando horas y minutos por un espacio.");
 			return;
-		}*/
+		}
 
 		//Mensajes especiales, los return los usamos para que no se ejecute el codigo de abajo y haya optimizacion
 		if(hora == 12 && minutos == 00){
-			System.out.println("Son las " + hora + ":" + minutos + " y es mediodia.");
+			System.out.println("Son las " + horaPrint + ":" + minutosPrint + " y es mediodia.");
 			return;
 		}else if(hora == 00 && minutos == 00){
-			System.out.println("Son las " + hora + ":" + minutos + " y es medianoche.");
+			System.out.println("Son las " + horaPrint + ":" + minutosPrint + " y es medianoche.");
 			return;
 		}
 
@@ -43,6 +40,6 @@ public class HoraDia{
 		}
 
 		//Mensaje lanzado con hora y minutos
-		System.out.println("Son las " + hora  + ":" + minutos + " de la " + momento);
+		System.out.println("Son las " + horaPrint  + ":" + minutosPrint + " de la " + momento);
 	}
 }
